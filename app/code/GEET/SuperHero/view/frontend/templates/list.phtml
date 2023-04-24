@@ -1,0 +1,27 @@
+<?php
+/**
+ * @var $block \GEET\SuperHero\Block\Display
+ */
+
+$heroes = $block->getAllSuperHeroes();
+?>
+<?php if (count($heroes) > 0): ?>
+    <table border="1">
+        <tr>
+            <th><?= __("ID") ?></th>
+            <th><?= __("Name") ?></th>
+            <th><?= __("Production Company") ?></th>
+        </tr>
+        <?php foreach ($heroes as $hero): ?>
+            <tr>
+                <td><?= $hero->getId() ?></td>
+                <td><?= $hero->getName() ?></td>
+                <td><?= $hero->getProductionCompany() ?></td>
+
+            </tr>
+        <?php endforeach; ?>
+    </table>
+<?php else: ?>
+    <h1 style="color: red"><?= __("Super Heroes still not born :(") ?></h1>
+<?php endif; ?>
+

@@ -1,0 +1,12 @@
+{
+    "jc_superhero": {
+        "column": {
+            "id": true,
+            "name": true,
+            "production_company": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

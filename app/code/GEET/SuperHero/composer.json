@@ -1,0 +1,20 @@
+{
+  "name": "jc/super-hero",
+  "version": "1.0.0",
+  "description": "A module to demonstrate Models, Resource Models and Collections in Magento 2",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*"
+  },
+  "license": [
+    "Open Software License (OSL)"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Jc\\SuperHero\\": ""
+    }
+  }
+}
