@@ -8,5 +8,10 @@
             </arguments>
         </referenceBlock>
         <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="register-link">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true">Resiter Account</argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>

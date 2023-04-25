@@ -1,6 +1,6 @@
 <?php
 
-namespace GEET\SuperHero\Block;
+namespace GEET\SuperHero\Account;
 
 use GEET\SuperHero\Model\ResourceModel\Hero\Collection;
 use Magento\Framework\View\Element\Template;
