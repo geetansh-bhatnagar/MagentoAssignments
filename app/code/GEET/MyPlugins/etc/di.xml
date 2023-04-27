@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="GEET_MyPlugins_plugina" type="GEET\MyPlugins\Plugin\PluginA" sortOrder="10" />
+        <plugin name="GEET_MyPlugins_pluginb" type="GEET\MyPlugins\Plugin\PluginB" sortOrder="20" />
+        <plugin name="GEET_MyPlugins_pluginc" type="GEET\MyPlugins\Plugin\PluginC" sortOrder="30" />
+    </type>
+</config>
+
