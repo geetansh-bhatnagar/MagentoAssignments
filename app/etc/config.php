@@ -346,6 +346,7 @@ return [
         'Magento_WishlistSampleData' => 1,
         'GEET_MyPlugins' => 1,
         'GEET_SuperHero' => 1,
+        'GEET_Wishlist' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1
