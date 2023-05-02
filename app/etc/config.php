@@ -344,9 +344,12 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
+        'GEET_EventsObservers' => 1,
         'GEET_MyPlugins' => 1,
         'GEET_SuperHero' => 1,
         'GEET_Wishlist' => 1,
+        'Mageplaza_Core' => 1,
+        'Mageplaza_Smtp' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1

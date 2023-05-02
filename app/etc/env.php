@@ -1,5 +1,15 @@
 <?php
 return [
+    'log' => [
+        'writer' => [
+            'name' => 'debug',
+            'handlers' => [
+                'Magento\\Framework\\Logger\\Handler\\Console'
+            ],
+            'fileName' => 'debug.log',
+            'enabled' => true
+        ]
+    ],
     'backend' => [
         'frontName' => 'admin'
     ],
