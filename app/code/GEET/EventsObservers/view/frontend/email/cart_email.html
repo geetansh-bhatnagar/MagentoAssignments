@@ -6,19 +6,19 @@
 "var administrator_name":"Administrator Name"
 } @-->
 
-<!--{{template config_path="design/email/header_template"}}-->
+{{template config_path="design/email/header_template"}}
 
-<!--<p class="greeting">{{trans "Hello <b>%administrator_name</b>," administrator_name=$administrator_name|row}}</p>-->
+<div style="background-color: #f7f7f7; padding: 20px; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; color: #333;">
+    <p style="margin-bottom: 20px;">Heyyyy {{var customer_name}},</p>
 
-<!--<p>{{trans 'The customer named <b>%customer_name</b> just logged into the %store_name:' customer_name=$customer.name store_name=$store.getFrontendName()|row}}</p>-->
+    <p style="margin-bottom: 20px;">Your Cart seems Heavy, You currently have {{var cartItems}} items in your cart. Thank you for your interest in our products!</p>
 
-<!--<p>{{trans "You don't need to do anything, this email helps you to track the activations of the customers."|row}}</p>-->
+    <p style="margin-bottom: 20px;">Please use the code <strong>CART5OFF</strong> at checkout to receive 5% off your purchase.</p>
 
-<!--{{template config_path="design/email/footer_template"}}-->
+    <p style="margin-bottom: 20px;">As always, if you have any questions or concerns, please don't hesitate to contact us.</p>
 
+    <p style="margin-bottom: 0;">Thank you for choosing {{var store.getFrontendName()}}!</p>
 
-<div>
-
-    Das ist ein Test
 
 </div>
+{{template config_path="design/email/footer_template"}}

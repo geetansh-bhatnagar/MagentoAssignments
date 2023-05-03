@@ -40,29 +40,48 @@ class EmailTrigger implements ObserverInterfaceAlias
     public function execute(Observer $observer)
     {
 
-        global $objectManager;
         $cart = $observer->getCart();
         $quote = $cart->getQuote();
         $cartItems = $quote->getItemsCount();
+        $this->logger->debug($cartItems);
 
         if ($cartItems > 5) {
-            $email = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('trans_email/ident_general/email');
-            $storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
-            $transportBuilder = $objectManager->get('\Magento\Framework\Mail\Template\TransportBuilder');
-            $storeId = $storeManager->getStore()->getId();
+            // Just to Check if the function is called or not
+            $this->logger->debug('Function called');
 
+            /* Receiver Detail */
+            $receiverInfo = [
+                'name' => 'Geetansh',
+                'email' => 'geetansh.bhatnagar@sigmainfo.net'
+            ];
+            
+//            This line gets the current store information.
 
-            $transport = $transportBuilder->setTemplateIdentifier('GEET_EventsObservers_email_cart_template')
-                ->setTemplateOptions(['area' => 'frontend', 'store' => $storeId])
-                ->setTemplateVars(
-                    [
-                        'store' => $storeManager->getStore(),
-                    ]
-                )
-                ->setFrom($email, 'Service')
-                // you can config general email address in Store -> Configuration -> General -> Store Email Addresses
-                ->addTo('geetansh.bhatnagar@sigmainfo.net', 'Customer Name')
-                ->getTransport();
-            $transport->sendMessage();
-        }}
-}
+            $store = $this->storeManager->getStore();
+
+//            This array defines the template variables for the email.
+
+            $templateParams = ['administrator_name' => $receiverInfo['name'],
+                'cartItems' => $cartItems ];
+
+            $transport = $this->transportBuilder->setTemplateIdentifier(
+                'GEET_EventsObservers_email_cart_template'
+            )->setTemplateOptions(
+                ['area' => 'frontend', 'store' => $store->getId()]
+            )->addTo(
+                $receiverInfo['email'], $receiverInfo['name']
+            )->setTemplateVars(
+                $templateParams
+            )->setFrom(
+                'general'
+            )->getTransport();
+
+            try {
+                // Send an email
+                $transport->sendMessage();
+            } catch (\Exception $e) {
+                // Write a log message whenever get errors
+                $this->logger->critical($e->getMessage());
+            }
+    }
+}}
