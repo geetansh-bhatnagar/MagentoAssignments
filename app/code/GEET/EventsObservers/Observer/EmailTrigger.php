@@ -64,4 +64,5 @@ class EmailTrigger implements ObserverInterfaceAlias
                 ->addTo('geetansh.bhatnagar@sigmainfo.net', 'Customer Name')
                 ->getTransport();
             $transport->sendMessage();
-        }}}
+        }}
+}
