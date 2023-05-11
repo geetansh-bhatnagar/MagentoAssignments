@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" display="false"/>
+        <referenceBlock name="category.product.addto.compare" display="false"/>
+        <referenceBlock name="catalogsearch.product.addto.compare" display="false"/>
+        <referenceBlock name="crosssell.product.addto.compare" display="false"/>
+        <referenceBlock name="related.product.addto.compare" display="false"/>
+        <referenceBlock name="upsell.product.addto.compare" display="false"/>
+        <referenceBlock name="view.addto.compare" display="false"/>
+        <referenceBlock name="privacy-policy-link" display="false"/>
+        <referenceBlock name="catalog-search-advanced-link" display="false"/>
+        <referenceBlock name="contact-us-link" display="false"/>
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="custom-footer-link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Cart</argument>
+                    <argument name="path" xsi:type="string">checkout/cart/</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+
+
+    </body>
+</page>

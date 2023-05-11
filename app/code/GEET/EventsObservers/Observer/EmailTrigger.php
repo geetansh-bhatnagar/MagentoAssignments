@@ -54,7 +54,7 @@ class EmailTrigger implements ObserverInterfaceAlias
                 'name' => 'Geetansh',
                 'email' => 'geetansh.bhatnagar@sigmainfo.net'
             ];
-            
+
 //            This line gets the current store information.
 
             $store = $this->storeManager->getStore();
