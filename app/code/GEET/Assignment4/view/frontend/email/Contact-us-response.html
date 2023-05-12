@@ -1,0 +1,24 @@
+<!--@subject {{trans "Contact Us Response"}} @-->
+<!--@vars {
+"var data.comment":"Comment",
+"var data.email":"Sender Email",
+"var data.name":"Sender Name",
+"var data.telephone":"Sender Telephone"
+} @-->
+
+
+{{template config_path="design/email/header_template"}}
+
+<table class="message-details">
+    <tr>
+        <td><strong>Dear <b>{{var data.name}}</b>, your message has been received, we will answer you in the best time.</strong></td>
+    </tr>
+    <tr>
+        <td>One of the team will be in touch soon.</td>
+    </tr>
+    <tr>
+        <td>Regards Team Sigma</td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}

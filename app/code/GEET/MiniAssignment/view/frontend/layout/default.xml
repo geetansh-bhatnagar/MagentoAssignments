@@ -11,7 +11,7 @@
         <referenceBlock name="view.addto.compare" display="false"/>
         <referenceBlock name="privacy-policy-link" display="false"/>
         <referenceBlock name="catalog-search-advanced-link" display="false"/>
-        <referenceBlock name="contact-us-link" display="false"/>
+<!--        <referenceBlock name="contact-us-link" display="false"/>-->
         <referenceBlock name="footer_links">
             <block class="Magento\Framework\View\Element\Html\Link\Current" name="custom-footer-link">
                 <arguments>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
-    <template id="GEET_EventsObservers_email_cart_template" label="cart email" file="cart_email.html" type="html" module="GEET_EventsObservers" area="frontend"/>
+    <template id="GEET_EventsObservers_email_cart_template" label="cart email" file="email_template.html" type="html" module="GEET_EventsObservers" area="frontend"/>
 </config>

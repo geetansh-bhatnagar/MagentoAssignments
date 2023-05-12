@@ -344,6 +344,7 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
+        'GEET_Assignment4' => 1,
         'GEET_EventsObservers' => 1,
         'GEET_MiniAssignment' => 1,
         'GEET_MyPlugins' => 1,
