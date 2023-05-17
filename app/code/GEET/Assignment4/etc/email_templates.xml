@@ -4,3 +4,4 @@
     <template id="contact_email_contact_confirmation_template" label="Contact Us Response"
               file="Contact-us-response.html" type="html" module="GEET_Assignment4" area="frontend"/>
 </config>
+

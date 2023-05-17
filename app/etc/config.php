@@ -346,6 +346,7 @@ return [
         'Magento_WishlistSampleData' => 1,
         'GEET_Assignment4' => 1,
         'GEET_EventsObservers' => 1,
+        'GEET_InfiniteScroll' => 1,
         'GEET_MiniAssignment' => 1,
         'GEET_MyPlugins' => 1,
         'GEET_SuperHero' => 1,
