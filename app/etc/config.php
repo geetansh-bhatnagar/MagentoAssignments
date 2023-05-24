@@ -348,6 +348,7 @@ return [
         'GEET_CustomerAttribute' => 0,
         'GEET_CustomerAvatar' => 1,
         'GEET_EventsObservers' => 1,
+        'GEET_FreeShippingBar' => 1,
         'GEET_InfiniteScroll' => 1,
         'GEET_MiniAssignment' => 1,
         'GEET_MyPlugins' => 1,
