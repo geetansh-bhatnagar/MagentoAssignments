@@ -1,0 +1,12 @@
+{
+    "quote_address": {
+        "column": {
+            "middle_name": true
+        }
+    },
+    "sales_order": {
+        "column": {
+            "middle_name": true
+        }
+    }
+}
