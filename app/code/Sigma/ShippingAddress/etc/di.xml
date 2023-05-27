@@ -4,4 +4,8 @@
     <type name="Magento\Checkout\Model\ShippingInformationManagement">
         <plugin name="save_middle_name_to_quote_address_table" type="Sigma\ShippingAddress\Plugin\Checkout\Model\ShippingInformationManagement" disabled="false" />
     </type>
+
+    <type name="Magento\Sales\Ui\Component\Listing\Column\Address">
+        <plugin name="Sigma_ShippingAddress_add_custom_middle_name" type="Sigma\ShippingAddress\Plugin\Ui\Component\Listing\Column\Adress" sortOrder="10" disabled="false" />
+    </type>
 </config>

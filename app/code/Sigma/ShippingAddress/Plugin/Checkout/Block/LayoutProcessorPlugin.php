@@ -26,7 +26,7 @@ class LayoutProcessorPlugin
                 'template' => 'ui/form/field',
                 'elementTmpl' => 'ui/form/element/input',
                 'tooltip' => [
-                    'description' => 'This is Middle name field',
+                    'description' => 'Enter Your Nick Name in Case You dont have any middle name',
                 ],
             ],
             'dataScope' => 'shippingAddress.custom_attributes' . '.' .$customMiddleNameCode,
