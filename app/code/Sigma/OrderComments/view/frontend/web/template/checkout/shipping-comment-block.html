@@ -1,0 +1,20 @@
+<div data-bind="visible: selectedMethod() == 'flatrate'">
+    <div data-bind="mageInit: {'collapsible':{'openedState': '_active'}}">
+        <div data-role="title">
+            <h2>
+            <span class="action action-toggle" role="heading" aria-level="2">
+                <!-- ko i18n: 'Add a shipping comment'--><!-- /ko -->
+            </span>
+            </h2>
+        </div>
+        <div data-role="content">
+            <form class="form form-comment">
+                <div class="field">
+                    <div class="control">
+                        <textarea class="input-text" name="shipping_comment" rows="4" data-bind="attr:{placeholder: $t('Type here...')} " ></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
