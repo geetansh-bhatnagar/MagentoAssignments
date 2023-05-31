@@ -358,9 +358,9 @@ return [
         'Mageplaza_Smtp' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
-        'Sigma_OrderComments' => 1,
+        'Sigma_OrderComment' => 1,
         'Sigma_ProductMaterials' => 1,
-        'Sigma_ShippingAddress' => 1,
+        'Sigma_ShippingAddress' => 0,
         'Temando_ShippingRemover' => 1
     ]
 ];
