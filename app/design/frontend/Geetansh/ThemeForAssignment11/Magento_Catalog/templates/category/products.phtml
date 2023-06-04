@@ -1,7 +1,7 @@
 <?php
 /* @var \Magento\Catalog\Block\Category\View $block */
 $currentCategory = $block->getCurrentCategory();
-
+//to fetch subcategories
 $subcategories = $currentCategory->getChildrenCategories();
 if ($subcategories->count() > 0) {
     echo '<ul>';
