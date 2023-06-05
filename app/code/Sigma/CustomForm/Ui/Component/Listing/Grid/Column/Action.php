@@ -51,6 +51,7 @@ class Action extends Column
     public function prepareDataSource(array $dataSource)
     {
         if (isset($dataSource['data']['items'])) {
+
             foreach ($dataSource['data']['items'] as &$item) {
                 $name = $this->getData('name');
                 if (isset($item['entity_id'])) {
@@ -63,8 +64,12 @@ class Action extends Column
                         'label' => __('Edit'),
                     ];
 
+
                 }
             }
+//            $debugItemEntityId = $item['entity_id'];
+//            var_dump("Debug: Item entity_id - $debugItemEntityId");
+//            exit();
         }
 
         return $dataSource;

@@ -359,6 +359,7 @@ return [
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Sigma_CustomForm' => 1,
+        'Sigma_CustomerAccNumber' => 1,
         'Sigma_OrderComment' => 1,
         'Sigma_ProductMaterials' => 1,
         'Sigma_ShippingAddress' => 0,
