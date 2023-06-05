@@ -1,6 +1,5 @@
 <?php
 /* @var $block */
-//to fetch subcategories
 $subcategories = $block->getCurrentCategory()->getChildrenCategories();
 if ($subcategories->count() > 0) {
     echo '<ul>';
