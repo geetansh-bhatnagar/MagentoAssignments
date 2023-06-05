@@ -9,7 +9,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     /**
      * @var string
      */
-    protected $_idFieldName = 'id';
+    protected $_idFieldName = 'entity_id';
 
     protected function _construct()
     {

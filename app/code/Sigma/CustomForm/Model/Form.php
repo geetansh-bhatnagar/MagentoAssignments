@@ -32,16 +32,16 @@ class Form extends \Magento\Framework\Model\AbstractModel implements FormInterfa
      *
      * @return int
      */
-    public function getId()
+    public function getEntityId()
     {
-        return $this->getData(self::ID);
+        return $this->getData(self::ENTITY_ID);
     }
     /**
      * Set Id.
      */
-    public function setId($Id)
+    public function setEntityId($entityId)
     {
-        return $this->setData(self::ID, $Id);
+        return $this->setData(self::ENTITY_ID, $entityId);
     }
     /**
      * Get Name

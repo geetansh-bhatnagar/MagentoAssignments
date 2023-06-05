@@ -20,7 +20,7 @@
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
             <argument name="name" xsi:type="string">grid_record_grid_list_data_source</argument>
-            <argument name="primaryFieldName" xsi:type="string">id</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -110,7 +110,7 @@
         <selectionsColumn name="ids">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="indexField" xsi:type="string">id</item>
+                    <item name="indexField" xsi:type="string">entity_id</item>
                     <item name="sorting" xsi:type="string">desc</item>
                     <item name="sortOrder" xsi:type="number">0</item>
                 </item>

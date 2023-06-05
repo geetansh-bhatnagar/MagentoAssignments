@@ -16,7 +16,7 @@ interface FormInterface
     /**
      * Constants for keys of data array. Identical to the name of the getter in snake case.
      */
-    const ID = 'id';
+    const ENTITY_ID = 'entity_id';
     const NAME = 'name';
     const EMAIL = 'email';
     const CONTACT_NUMBER = 'contact_number';
@@ -29,12 +29,11 @@ interface FormInterface
      *
      * @return int
      */
-    public function getId();
-
+    public function getEntityId();
     /**
      * Set EntityId.
      */
-    public function setId($Id);
+    public function setEntityId($entityId);
 
     /**
      * Get Title.

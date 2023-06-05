@@ -6,7 +6,7 @@ class Form extends AbstractDb
 {   /**
  * @var string
  */
-    protected $_idFieldName = 'id';
+    protected $_idFieldName = 'entity_id';
     /**
      * @var \Magento\Framework\Stdlib\DateTime\DateTime
      */
@@ -35,6 +35,6 @@ class Form extends AbstractDb
      */
     protected function _construct()
     {
-        $this->_init('custom_contactus_form', 'id');
+        $this->_init('custom_contactus_form', 'entity_id');
     }
 }
