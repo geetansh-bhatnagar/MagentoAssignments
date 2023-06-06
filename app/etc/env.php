@@ -59,7 +59,10 @@ return [
                 'id_prefix' => 'f73_'
             ]
         ],
-        'allow_parallel_generation' => false
+        'allow_parallel_generation' => false,
+        'graphql' => [
+            'id_salt' => 'oYyDfIDdiCV3uWjXl5TqTfYmrEpUpVRw'
+        ]
     ],
     'lock' => [
         'provider' => 'db'
