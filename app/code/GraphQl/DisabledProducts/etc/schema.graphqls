@@ -1,0 +1,13 @@
+type Query {
+disabledProductsList : [DisabledProductsListOutput] @resolver(class: "GraphQl\\DisabledProducts\\Model\\Resolver\\DisabledProductsList") @doc(description: "Get Disabled Products list")
+}
+type DisabledProductsListOutput @doc(description: "Output for disabled Product"){
+    entityId : Int    @doc(description: "Entity id of Product")
+    proName  : String @doc(description: "Name Of Product")
+    sku      : String @doc(description: "Unique id of Product")
+    category : String @doc(description: "Category of Product")
+    weight   : Int    @doc(description: "Weight of Product")
+}
+
+
+
