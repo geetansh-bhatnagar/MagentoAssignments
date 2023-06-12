@@ -1,0 +1,149 @@
+#For Assignment 1
+type Query {
+disabledProductsList : [DisabledProductsListOutput] @resolver(class: "Sigma\\GraphQl\\Model\\Resolver\\DisabledProductsList") @doc(description: "Get Disabled Products list")
+}
+type DisabledProductsListOutput @doc(description: "Output for disabled Product"){
+    entityId : Int    @doc(description: "Entity id of Product")
+    proName  : String @doc(description: "Name Of Product")
+    sku      : String @doc(description: "Unique id of Product")
+    category : String @doc(description: "Category of Product")
+    weight   : Int    @doc(description: "Weight of Product")
+}
+
+#For Assignment 2
+type Query {
+    dailyDeal: DailyDeal @resolver(class: "Sigma\\GraphQl\\Model\\Resolver\\DailyDeal") @doc(description: "Get Products Which Have Special Price Today")
+}
+type DailyDeal @doc(description: "Output for special price products Product"){
+    products_skus: [String] @doc(description: "Unique id of Product")
+}
+
+#For Assignment 5
+type Query {
+    customerList(
+        currentPage: Int = 1 @doc(description: "Specifies which page of results to return. The default value is 1.")
+        pageSize: Int = 20 @doc(description: "Specifies the maximum number of results to return at once. The default value is 20.")
+    ): CustomersOutput @resolver(class: "Sigma\\GraphQl\\Model\\Resolver\\Customers") @doc(description: "Query to retrieve a list of all customers with pagination, including columns (customer_id, email, and group) like the product query.")
+}
+
+type CustomersOutput @doc(description: "Output for list of customers with pagination") {
+    success: Boolean
+    message: String
+    total_count: Int
+    items: [Customer]!
+    page_info: PageInfo!
+}
+
+type Customer @doc(description: "Customer details") {
+    customer_id: Int
+    email: String
+    group: String
+}
+
+type PageInfo @doc(description: "Pagination information") {
+    current_page: Int
+    page_size: Int
+    total_pages: Int
+}
+
+#For Assignment 3
+type Mutation {
+    createProduct(product: ProductInput!): Product! @resolver(class: "Sigma\\GraphQl\\Model\\Resolver\\CreateProduct")
+}
+
+type Product {
+    id: ID!
+    name: String!
+    description: String!
+    price: Float!
+}
+
+input ProductInput {
+    sku: String!
+    name: String!
+    description: String!
+    price: Float!
+}
+
+#For Assignment 4
+type Query {
+    products(
+        search: String
+        pageSize: Int = 20 @doc(description: "Specifies the maximum number of results to return at once. The default value is 20.")
+    ): ProductResult @resolver(class: "Sigma\\GraphQl\\Model\\Resolver\\ProductResult") @doc(description: "Query to retrieve a list of products with pagination.")
+}
+
+type ProductResult {
+    total_count: Int!
+    items: [Product]
+    page_info: PageInfo!
+}
+
+type Product {
+    name: String!
+    sku: String!
+    brand: String!
+    price_range: [PriceRange]
+}
+
+type PriceRange {
+    minimum_price: [RegularPrice]
+}
+
+type RegularPrice {
+    regular_price: RegularPriceInfo
+}
+
+type RegularPriceInfo {
+    value: Float
+    currency: String
+}
+
+#Mutation for Assignment 6
+
+type Mutation {
+    generateCustomerToken(
+        email: String!
+        password: String!
+    ): GenerateCustomerTokenOutput @resolver(class: "Sigma\\GraphQl\\Model\\Resolver\\GenerateCustomerToken") @doc(description: "Generate customer token with extra parameters")
+}
+type GenerateCustomerTokenOutput {
+    token: String!
+    customer_id: Int!
+    group: String!
+    newsletter_subscribe: String!
+}
+
+#Query for assignment 7
+type Query {
+    storeConfig(
+        store: String
+    ): StoreConfig! @resolver(class: "Sigma\\GraphQl\\Model\\Resolver\\StoreConfig")
+}
+
+type StoreConfig {
+    website_default_title: String
+    website_default_index: String
+}
+
+#Mutation for Assignment 10
+
+type Query {
+    orders(
+        startDate: String! @doc(description: "Start Date"),
+        endDate: String! @doc(description: "End Date")
+    ): [Order] @resolver(class: "Sigma\\GraphQl\\Model\\Resolver\\OrderDetails") @doc(description: "Get Order Details")
+}
+type Order {
+    order_id: Int @doc(description: "Order Id")
+    increment_id: String @doc(description: "Increment Id")
+    items: [Item] @doc(description: "Item details")
+}
+
+type Item {
+    item_id: Int @doc(description: "Product Id")
+    item_name: String @doc(description: "Product Name")
+    qty: Int @doc(description: "Quantity of Product")
+}
+
+

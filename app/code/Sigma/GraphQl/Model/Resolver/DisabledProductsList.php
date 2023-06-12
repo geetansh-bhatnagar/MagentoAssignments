@@ -1,5 +1,5 @@
 <?php
-namespace GraphQL\DisabledProducts\Model\Resolver ;
+namespace Sigma\GraphQl\Model\Resolver ;
 
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\GraphQl\Config\Element\Field;

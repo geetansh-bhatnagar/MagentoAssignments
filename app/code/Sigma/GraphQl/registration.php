@@ -2,6 +2,6 @@
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'GraphQl_DisabledProducts',
+    'Sigma_GraphQl',
     __DIR__
 );
